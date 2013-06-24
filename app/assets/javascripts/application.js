@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.backstretch
 //= require_tree .
+
+
 $('document').ready(function() {
 
   // display validation errors for the "request invitation" form

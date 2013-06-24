@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :ad1, :ad2, :county, :postcode, :tel1, :tel2, :ab1, :ab2
 
   after_create :add_user_to_mailchimp
   before_destroy :remove_user_from_mailchimp

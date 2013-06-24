@@ -11,4 +11,8 @@ Dealer::Application.routes.draw do
   resources :users do
     get 'invite', :on => :member
   end
+
+  match '/signin',  to: 'devise#sessions#new'
+  
+
 end
