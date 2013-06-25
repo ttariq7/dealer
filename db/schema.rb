@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130624113921) do
+ActiveRecord::Schema.define(:version => 20130624151906) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -61,5 +61,27 @@ ActiveRecord::Schema.define(:version => 20130624113921) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
+
+  create_table "vehicles", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.string   "mileage"
+    t.text     "description"
+    t.string   "year"
+    t.string   "transmission"
+    t.string   "doors"
+    t.string   "fuel"
+    t.string   "engine"
+    t.string   "colour"
+    t.string   "body"
+    t.string   "model"
+    t.string   "make"
+    t.string   "price"
+    t.string   "status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "vehicles", ["user_id", "created_at"], :name => "index_vehicles_on_user_id_and_created_at"
 
 end
