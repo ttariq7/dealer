@@ -1,12 +1,159 @@
-<div id="tabs" style="margin-left:210px;">
-  <ul>
-    <li><a href="#tabs-1">Preloaded</a></li>
-    <li><a href="2/used_cars.html">Tab 1</a></li>
-    <li><a href="ajax/content2.html">Tab 2</a></li>
-    <li><a href="ajax/content3-slow.php">Tab 3 (slow)</a></li>
-    <li><a href="ajax/content4-broken.php">Tab 4 (broken)</a></li>
-  </ul>
-  <div id="tabs-1">
-    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+
+<div id="profile" style="width:75.5%;height:170px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto3';background:black;opacity:0.7;color:#cfcfcf;">
+
+
+
+
+
+<div id="gallery">
+
+      <div id="scrollGalleryHead">
+          <div id="thumbarea">
+            <div id="thumbareaContent">
+                            <img  src="/fotos/small_image2.jpg" width="200" height="150" alt="" />
+                            <img  src="/fotos/small_image2.jpg" width="200" height="150" alt="" />
+                            <img  src="/fotos/small_image3.jpg" width="200" height="150" alt="" />
+                            <img  src="/fotos/small_image4.jpg" width="200" height="150" alt="" />
+                            <img  src="/fotos/small_image5.jpg" width="200" height="150" alt="" />
+                            <img  src="/fotos/small_image6.jpg" width="200" height="150" alt="" />
+            </div> 
+          </div>
+        </div>
+        <div id="scrollGalleryFoot">
+          <div id="imagearea">
+            <div id="imageareaContent">
+                            <img  src="fotos/image1.jpg" alt="" />
+                            <img  src="fotos/image2.jpg" alt="" />
+                            <img  src="fotos/image3.jpg" alt="" />
+                            <img  src="fotos/image4.jpg" alt="" />
+                            <img  src="fotos/image5.jpg" alt="" />
+                            <img  src="fotos/image6.jpg" alt="" />
+            </div> 
+          </div> 
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+<div style="width:37%;height:150px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto2';background:black;opacity:0.7;color:#cfcfcf;float:left;">
+
+<p style="margin:20px;font-size:25px;"> ABOUT </p>
+
+</div>
+
+<div style="position:relative;width:37%;height:150px;margin-top:1.8%;margin-right:1.5%;font-family: 'Roboto2';background:black;opacity:0.7;color:#cfcfcf;float:right;">
+
+<p style="margin:20px;font-size:25px;"> SERVICES </p>
+
+</div>
+
+<div id="contact" style="position:relative;float:left;width:75.5%;height:350px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto3';background:black;opacity:0.7;color:#cfcfcf;">
+
+
+
+
+
+<iframe width="60%" height="330" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?client=safari&amp;q=sl3+7fg&amp;ie=UTF8&amp;hq=&amp;hnear=Slough+SL3+7FG,+United+Kingdom&amp;gl=uk&amp;t=m&amp;z=14&amp;ll=51.501984,-0.571126&amp;output=embed" style="float:right;margin-top:10px;margin-right:10px;"></iframe>
+
+
+</div>
+
+<div id="finance" style="width:37%;height:150px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto2';background:black;opacity:0.7;color:#cfcfcf;float:left;">
+
+<p style="margin:20px;font-size:25px;"> FINANCE </p>
+
+</div>
+
+<div style="position:relative;width:37%;height:150px;margin-top:1.8%;margin-right:1.5%;font-family: 'Roboto2';background:black;opacity:0.7;color:#cfcfcf;float:right;">
+
+
+</div>
+
+<div style="width:37%;height:150px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto2';background:black;opacity:0.7;color:#cfcfcf;float:left;">
+
+
+
+</div>
+
+<div id="warranty" style="position:relative;width:37%;height:150px;margin-top:1.8%;margin-right:1.5%;font-family: 'Roboto2';background:black;opacity:0.7;color:#cfcfcf;float:right;">
+
+<p style="margin:20px;font-size:25px;"> WARRANTY </p>
+
+</div>
+
+
+
+<% if @user.vehicles.any? %>
+<div
+ id="used" style="width:75.5%;height:55px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto2';background:black;opacity:0.7;color:#cfcfcf;float:left;margin-bottom:1.8%;">
+<p style="margin:20px;font-size:25px;"> USED CARS </p>
+</div>
+
+
+<div style="margin-left:23%;width:75.5%;float:left;">
+  <div id="container" style="margin:0px auto;">
+      <%= render @vehicles  %>
   </div>
 </div>
+
+    <% end %>
+
+<div
+style="width:75.5%;height:50px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto3';background:black;opacity:0.7;color:#cfcfcf;float:left;margin-bottom:1.8%;">
+
+<p style="text-align:center;margin:15px;"> © 2013 Emporio Cars </p>
+
+</div>
+
+<script type="text/javascript">
+
+var $container = $('#container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+      isFitWidth: true,
+    itemSelector : '.item',
+    columnWidth : 225
+  });
+});
+
+</script>
+
+
+    <%= javascript_include_tag "jquery" %>
+        <%= javascript_include_tag "jquery.backstretch" %>
+
+  <script>
+        $.backstretch([
+          "/fplanet.jpg",
+          "/fcity.jpg",
+          "/lambo.jpg"
+        ], {
+            fade: 1750,
+            duration: 4000
+        });
+    </script>
+
+
+<script>
+
+$(function(){
+    $("a.js_onPageLink").bind("click", function (event) {
+        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+        var target = $(this).attr("href");
+        $("html, body").stop().animate({
+                scrollLeft: $(target).offset().left,
+                scrollTop: $(target).offset().top
+            }, 1200);
+    });
+});
+
+</script>
+
+
+

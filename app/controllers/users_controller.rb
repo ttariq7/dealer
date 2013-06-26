@@ -8,6 +8,14 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @vehicles = @user.vehicles
+    @vehicle = current_user.vehicles.build if signed_in?
+  end
+
+  def dashboard
+    @user = current_user
+    @vehicles = @user.vehicles
+    @vehicle = current_user.vehicles.build if signed_in?
   end
 
   def update

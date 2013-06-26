@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "EMPORIO CARS" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Dealer" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -12,20 +11,24 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
-  <script>
-  $(function() {
-    $( "#tabs" ).tabs({
-      beforeLoad: function( event, ui ) {
-        ui.jqXHR.error(function() {
-          ui.panel.html(
-            "Couldn't load this tab. We'll try to fix this as soon as possible. " +
-            "If this wouldn't be a demo." );
+
+
+  <link rel="stylesheet" href="demo.css" type="text/css" />
+  <%= javascript_include_tag "mootools-core-1.3.1-full-nocompat" %>
+  <%= javascript_include_tag "mootools-1.3.1.1-more" %>
+  <%= javascript_include_tag "scrollGallery" %>
+  <%= javascript_include_tag "jquery.masonry.min" %>
+
+    <script type="text/javascript">
+        window.addEvent('domready', function() {
+            var scrollGalleryObj = new scrollGallery({
+        start:0,
+        autoScroll: true
+      });
         });
-      }
-    });
-  });
-  </script>
+    </script>
+
+
 
 
     <%= yield(:head) %>
@@ -36,7 +39,7 @@
 
 
         <div >
-        
+          <%= render 'layouts/navigation' if signed_in? %>
         </div>
 
 

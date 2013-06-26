@@ -1,0 +1,25 @@
+<div style="margin-left:33%;z-index:100000;">
+  <%= form_for(@vehicle) do |f| %>
+  <%= f.text_field :body, placeholder: "Body Type" %>
+  <%= f.text_field :colour, placeholder: "Colour" %>
+  <%= f.text_field :description, placeholder: "Description" %>
+  <%= f.text_field :doors, placeholder: "No. Doors" %>
+  <%= f.text_field :engine, placeholder: "Engine (Litre)" %>
+  <%= f.text_field :fuel, placeholder: "Fuel Type" %>
+  <%= f.text_field :make, placeholder: "Car Manufacturer" %>
+  <%= f.text_field :mileage, placeholder: "Mileage" %>
+  <%= f.text_field :model, placeholder: "Model" %>
+  <%= f.text_field :name, placeholder: "Title" %>
+  <%= f.text_field :price, placeholder: "Price" %>
+  <%= f.text_field :status, placeholder: "Sold/Unsold" %>
+  <%= f.text_field :transmission, placeholder: "Transmission" %>
+  <%= f.text_field :year, placeholder: "Year of Car" %>
+  <%= f.file_field :img1 %>
+  <%= f.file_field :img2 %>
+  <%= f.file_field :img3 %>
+  <%= f.file_field :img4 %>
+  <%= f.file_field :img5 %>
+  <%= f.file_field :img6 %>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+  <% end %>
+</div>

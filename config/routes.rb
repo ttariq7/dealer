@@ -2,6 +2,10 @@ Dealer::Application.routes.draw do
   authenticated :user do
     root :to => 'home#index'
   end
+
+  resources :vehicles, only: [:create, :destroy]
+
+
   devise_scope :user do
     root :to => "devise/registrations#new"
     match '/user/confirmation' => 'confirmations#update', :via => :put, :as => :update_user_confirmation
@@ -13,6 +17,7 @@ Dealer::Application.routes.draw do
   end
 
   match '/signin',  to: 'devise#sessions#new'
+  match '/dashboard',  to: 'users#dashboard'
   
 
 end
