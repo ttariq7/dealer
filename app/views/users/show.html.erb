@@ -1,5 +1,5 @@
 
-<div id="profile" style="width:75.5%;height:170px;margin-top:1.8%;margin-left:23%;font-family: 'Roboto3';background:black;opacity:0.7;color:#cfcfcf;">
+<div id="profile" style="width:75.5%;height:170px;margin-left:23%;font-family: 'Roboto3';background:black;opacity:0.7;color:#cfcfcf;">
 
 
 
@@ -10,12 +10,20 @@
       <div id="scrollGalleryHead">
           <div id="thumbarea">
             <div id="thumbareaContent">
-                            <img  src="/fotos/small_image2.jpg" width="200" height="150" alt="" />
+
+              <% @vehicles.each do |vehicle| %>
+                  <div style="width:220px;height:200px;">
+                  <%= image_tag vehicle.img1_url.to_s if vehicle.img1? %>
+                  </div>
+              <%end%>
+
+                                          <img  src="/fotos/small_image2.jpg" width="200" height="150" alt="" />
                             <img  src="/fotos/small_image2.jpg" width="200" height="150" alt="" />
                             <img  src="/fotos/small_image3.jpg" width="200" height="150" alt="" />
                             <img  src="/fotos/small_image4.jpg" width="200" height="150" alt="" />
                             <img  src="/fotos/small_image5.jpg" width="200" height="150" alt="" />
                             <img  src="/fotos/small_image6.jpg" width="200" height="150" alt="" />
+
             </div> 
           </div>
         </div>
@@ -134,10 +142,10 @@ $container.imagesLoaded(function(){
           "/fcity.jpg",
           "/lambo.jpg"
         ], {
-            fade: 1750,
+            fade: 5000,
             duration: 4000
         });
-    </script>
+  </script>
 
 
 <script>

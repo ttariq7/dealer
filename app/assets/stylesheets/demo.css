@@ -1,5 +1,6 @@
 #gallery{
     width:100%; /*change this*/
+    margin-top:-33px;
 }
 #imageareaContent img{
     width:100%; /*change this*/

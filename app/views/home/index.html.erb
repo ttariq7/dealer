@@ -1,26 +1,27 @@
-<%= link_to "current_user.name", root_path, :class => 'brand', :style => "font-family:Roboto2;" %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Login', new_user_session_path %>
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
-    <% if current_user.has_role? :admin %>
-      <li>
-      <%= link_to 'Admin', users_path %>
-      </li>
-    <% end %>
-  <% else %>
-    <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    </li>
-  <% end %>
-</ul>
+<div style="margin:0px auto;width:980px;">
+
+<div style="font-size:35px;font-family:Roboto2;">
+<p style="margin:30px;color:white;">EMPORIO CARS</p>
+</div>  
+
+
+
+<div style="margin-left:70px;">
+<a style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">HOME</a>
+<a style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">USED CARS</a>
+<a style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">WARRANTY</a>
+<a style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">ABOUT US</a>
+<a style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">FINANCE</a>
+<a style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">CONTACT US</a>
+</div>
+</div>
+<div style="width:100%;border-bottom:1px solid white;margin-top:60px;">
+</div>
+
+<img  src="/c63.jpg" style="width:100%;height:450px;" />
+
+
+
+
+
+

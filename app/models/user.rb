@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
     pending_any_confirmation {yield}
   end
 
-  private
+  #private
 
   #def add_user_to_mailchimp
   #  return if email.include?(ENV['ADMIN_EMAIL'])
