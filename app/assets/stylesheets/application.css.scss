@@ -43,3 +43,34 @@ background-image: -webkit-gradient(
 );
 font-family: 'Roboto2';
 }
+
+    html, body, ul, ol, li, form, fieldset, legend{
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    #wrap{      
+      width:100%;
+      margin:0 auto;
+    }
+    
+        
+    #content{   
+      overflow:hidden;
+      width:100%;  
+    }
+    
+    .contentbox-wrapper{      
+      position:relative; 
+      left:0; 
+      width:300%; 
+      height:100%;
+    }
+    
+    .contentbox{
+      width:33.3333333333333333%; 
+      height:100%; 
+      float:left; 
+    } 
+
