@@ -3,7 +3,7 @@ Dealer::Application.routes.draw do
     root :to => 'home#index'
   end
 
-  resources :vehicles, only: [:create, :destroy]
+  resources :vehicles
 
 
   devise_scope :user do

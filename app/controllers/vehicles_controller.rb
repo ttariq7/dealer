@@ -11,6 +11,10 @@ before_filter :correct_user,   only: :destroy
     end
   end
 
+  def show
+    @vehicle = Vehicle.find(params[:id])
+  end
+
   def destroy
     @vehicle.destroy
     redirect_to :back

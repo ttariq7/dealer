@@ -1,8 +1,20 @@
-<div style="position:absolute;z-index:99999999;border-bottom:1px solid white;height:110px;width:100%;background:black;opacity:0.8;">
+
+
+
+<div style="position:absolute;z-index:99999999;border-bottom:1px solid white;height:19%;width:100%;background:black;opacity:0.9;">
+
+
+
+
+
 
 <div style="font-size:35px;">
 <p style="margin:30px;color:white;font-family:Roboto2;">EMPORIO CARS</p>
 </div>  
+
+
+
+
 
 
 <div style="margin-left:70px;margin:0px auto;width:870px;">
@@ -20,7 +32,29 @@
 <a href="#" onClick="goto('#contact', this); return false"  style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">CONTACT US</a>
 
 </div>
+
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -38,28 +72,26 @@
 
         <div id="home" class="contentbox">
 
-        <img  src="/c63.jpg" style="width:100%;height:550px;border-bottom:1px solid white;" />
+        
+        <img  src="/c63.jpg" style="z-index:-100;width:100%;height:100%;border-bottom:1px solid white;" />
 
-        <div style="width:960px;margin:0px auto;">
+
+
+        <div style="width:960px;margin:0px auto;z-index:99999999999;margin-top:-40%;">
+      
+
+        <div style="float:right;width:450px;color:white;background:black;opacity:0.9;border:1px solid white;padding:20px;border-radius:2px;">
+        <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">HOME OF PRESTIGE CARS</h3>
+        <p style="font-size:17px;">Situated in Ilford, Essex we have been established since 2005. We specialise in Prestigious German cars.
+          Here at German Car Specialist Ltd you can find some of most unique and highly spec'd pre owned german vehicles. All of our used cars are 'very' carefully selected and predominately sourced through main dealers.We take great pride in preparing our cars to the highest standards. </p>
+        </div>
+
+
+        </div>
+
+
         
 
-        <div style="float:left;width:470px;height:300px;color:white;">
-        <h3>Emporio Cars - Home of Prestige</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis ornare nibh, vel condimentum risus blandit ut. Sed vel tortor ac ligula blandit interdum eu vel leo. In semper, nunc sit amet tincidunt volutpat, nisl elit tempor eros, at rutrum nisl enim a lorem. Ut quis tellus felis. Maecenas rhoncus accumsan odio quis faucibus. Aliquam erat tortor, vehicula eget facilisis eget, commodo et sapien. Suspendisse potenti. Praesent convallis urna non est mollis ultrices. Fusce fringilla lacinia sapien non eleifend. Morbi venenatis nulla id libero tempus et volutpat sem facilisis. Duis eu lacus sapien. Aliquam a lorem justo. Cras nec mi quam, vitae fermentum urna. </p>
-        </div>
-
-        <div style="float:right;width:470px;height:300px;">r</div>
-
-        <div style="float:left;width:470px;height:300px;">
-        </div>
-
-        <div style="float:right;width:470px;height:300px;color:white;">
-        <h3>Services</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis ornare nibh, vel condimentum risus blandit ut. Sed vel tortor ac ligula blandit interdum eu vel leo. In semper, nunc sit amet tincidunt volutpat, nisl elit tempor eros, at rutrum nisl enim a lorem. Ut quis tellus felis. Maecenas rhoncus accumsan odio quis faucibus. Aliquam erat tortor, vehicula eget facilisis eget, commodo et sapien. Suspendisse potenti. Praesent convallis urna non est mollis ultrices. Fusce fringilla lacinia sapien non eleifend. Morbi venenatis nulla id libero tempus et volutpat sem facilisis. Duis eu lacus sapien. Aliquam a lorem justo. Cras nec mi quam, vitae fermentum urna. </p>
-        </div>
-
-
-        </div>       
         </div>
         
 
@@ -78,11 +110,33 @@
 
 
 
-        <h3>Work</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis ornare nibh, vel condimentum risus blandit ut. Sed vel tortor ac ligula blandit interdum eu vel leo. In semper, nunc sit amet tincidunt volutpat, nisl elit tempor eros, at rutrum nisl enim a lorem. Ut quis tellus felis. Maecenas rhoncus accumsan odio quis faucibus. Aliquam erat tortor, vehicula eget facilisis eget, commodo et sapien. Suspendisse potenti. Praesent convallis urna non est mollis ultrices. Fusce fringilla lacinia sapien non eleifend. Morbi venenatis nulla id libero tempus et volutpat sem facilisis. Duis eu lacus sapien. Aliquam a lorem justo. Cras nec mi quam, vitae fermentum urna. </p>
-        </div>
-        
+<% if @user.vehicles.any? %>
 
+
+
+
+  <div id="container" style="margin:0px auto;width:100px;margin-top:11%;">
+      <%= render @vehicles  %>
+  </div>
+
+
+<% end %>
+        
+<script type="text/javascript">
+
+var $container = $('#container');
+$container.imagesLoaded(function(){
+  $container.masonry({
+      isFitWidth: true,
+    itemSelector : '.item',
+    columnWidth : 225
+  });
+});
+
+</script>
+
+
+</div>
 
 
 
@@ -96,15 +150,18 @@
 
 
         <div id="warranty" class="contentbox">
-        <img  src="/fplanet.jpg" style="width:100%;height:550px;border-bottom:1px solid white;" />
+        <img  src="/fplanet.jpg" style="width:100%;height:100%;border-bottom:1px solid white;" />
 
-        <div style="width:960px;margin:0px auto;">
-        <div style="float:left;width:470px;height:300px;color:white;">
+        <div style="width:960px;margin:0px auto;z-index:99999999999;margin-top:-40%;">
+      
 
-
-        <h3>Wararanty</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis ornare nibh, vel condimentum risus blandit ut. Sed vel tortor ac ligula blandit interdum eu vel leo. In semper, nunc sit amet tincidunt volutpat, nisl elit tempor eros, at rutrum nisl enim a lorem. Ut quis tellus felis. Maecenas rhoncus accumsan odio quis faucibus. Aliquam erat tortor, vehicula eget facilisis eget, commodo et sapien. Suspendisse potenti. Praesent convallis urna non est mollis ultrices. Fusce fringilla lacinia sapien non eleifend. Morbi venenatis nulla id libero tempus et volutpat sem facilisis. Duis eu lacus sapien. Aliquam a lorem justo. Cras nec mi quam, vitae fermentum urna. </p>
+        <div style="float:right;width:450px;color:white;background:black;opacity:0.9;border:1px solid white;padding:20px;border-radius:2px;">
+        <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">WARRANTY</h3>
+        <p style="font-size:17px;">Situated in Ilford, Essex we have been established since 2005. We specialise in Prestigious German cars.
+          Here at German Car Specialist Ltd you can find some of most unique and highly spec'd pre owned german vehicles. All of our used cars are 'very' carefully selected and predominately sourced through main dealers.We take great pride in preparing our cars to the highest standards. </p>
         </div>
+
+
         </div>
 
         </div>
@@ -121,15 +178,18 @@
 
         <div id="finance" class="contentbox">
 
-        <img  src="/c63.jpg" style="width:100%;height:550px;border-bottom:1px solid white;" />
+        <img  src="/c63.jpg" style="width:100%;height:100%;border-bottom:1px solid white;" />
                 
-        <div style="width:960px;margin:0px auto;">
-        <div style="float:RIGHT;width:470px;height:300px;color:white;">
+        <div style="width:960px;margin:0px auto;z-index:99999999999;margin-top:-40%;">
+      
 
-
-        <h3>Finance</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis ornare nibh, vel condimentum risus blandit ut. Sed vel tortor ac ligula blandit interdum eu vel leo. In semper, nunc sit amet tincidunt volutpat, nisl elit tempor eros, at rutrum nisl enim a lorem. Ut quis tellus felis. Maecenas rhoncus accumsan odio quis faucibus. Aliquam erat tortor, vehicula eget facilisis eget, commodo et sapien. Suspendisse potenti. Praesent convallis urna non est mollis ultrices. Fusce fringilla lacinia sapien non eleifend. Morbi venenatis nulla id libero tempus et volutpat sem facilisis. Duis eu lacus sapien. Aliquam a lorem justo. Cras nec mi quam, vitae fermentum urna. </p>
+        <div style="float:left;width:450px;color:white;background:black;opacity:0.9;border:1px solid white;padding:20px;border-radius:2px;">
+        <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">FINANCE</h3>
+        <p style="font-size:17px;">Situated in Ilford, Essex we have been established since 2005. We specialise in Prestigious German cars.
+          Here at German Car Specialist Ltd you can find some of most unique and highly spec'd pre owned german vehicles. All of our used cars are 'very' carefully selected and predominately sourced through main dealers.We take great pride in preparing our cars to the highest standards. </p>
         </div>
+
+
         </div>
 
                 
@@ -150,11 +210,19 @@
 
         <div id="about" class="contentbox">
 
-        <img  src="/lambo.jpg" style="width:100%;height:550px;border-bottom:1px solid white;" />
+        <img  src="/lambo.jpg" style="width:100%;height:100%;border-bottom:1px solid white;" />
 
 
-        <h3>About</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis ornare nibh, vel condimentum risus blandit ut. Sed vel tortor ac ligula blandit interdum eu vel leo. In semper, nunc sit amet tincidunt volutpat, nisl elit tempor eros, at rutrum nisl enim a lorem. Ut quis tellus felis. Maecenas rhoncus accumsan odio quis faucibus. Aliquam erat tortor, vehicula eget facilisis eget, commodo et sapien. Suspendisse potenti. Praesent convallis urna non est mollis ultrices. Fusce fringilla lacinia sapien non eleifend. Morbi venenatis nulla id libero tempus et volutpat sem facilisis. Duis eu lacus sapien. Aliquam a lorem justo. Cras nec mi quam, vitae fermentum urna. </p>
+        <div style="width:960px;margin:0px auto;z-index:99999999999;margin-top:-40%;">
+      
+
+        <div style="float:right;width:450px;color:white;background:black;opacity:0.9;border:1px solid white;padding:20px;border-radius:2px;">
+        <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">ABOUT US</h3>
+        <p style="font-size:17px;">Situated in Ilford, Essex we have been established since 2005. We specialise in Prestigious German cars.
+          Here at German Car Specialist Ltd you can find some of most unique and highly spec'd pre owned german vehicles. All of our used cars are 'very' carefully selected and predominately sourced through main dealers.We take great pride in preparing our cars to the highest standards. </p>
+        </div>
+</div>
+
         </div>
         
 
@@ -173,9 +241,29 @@
 
 
         <div id="contact" class="contentbox">
-        <img  src="/fplanet.jpg" style="width:100%;height:550px;border-bottom:1px solid white;" />
-        <h3>Contact</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis ornare nibh, vel condimentum risus blandit ut. Sed vel tortor ac ligula blandit interdum eu vel leo. In semper, nunc sit amet tincidunt volutpat, nisl elit tempor eros, at rutrum nisl enim a lorem. Ut quis tellus felis. Maecenas rhoncus accumsan odio quis faucibus. Aliquam erat tortor, vehicula eget facilisis eget, commodo et sapien. Suspendisse potenti. Praesent convallis urna non est mollis ultrices. Fusce fringilla lacinia sapien non eleifend. Morbi venenatis nulla id libero tempus et volutpat sem facilisis. Duis eu lacus sapien. Aliquam a lorem justo. Cras nec mi quam, vitae fermentum urna. </p>
+
+          <iframe width="100%" height="100%" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" scrollwheel="false" src="http://maps.google.co.uk/maps?client=safari&amp;q=sl3+7fg&amp;ie=UTF8&amp;hq=&amp;hnear=Slough+SL3+7FG,+United+Kingdom&amp;gl=uk&amp;t=m&amp;z=14&amp;ll=51.501984,-0.571126&amp;output=embed" style=""></iframe>
+
+          <div style="position:absolute;top:140px;width:320px;height:320px;right:20px;background:black;opacity:0.9;border:1px solid white;border-radius:2px;">
+
+          <p style="color:#cfcfcf;margin-left:60px;margin-top:20px;font-size:20px;font-family: 'Roboto2';line-height:25px;font-weight:normal;">  12 Downs Road</br>
+                                                                          Canterbury</br>
+                                                                          CT2 7TN
+                                                                          </br></br>
+                                                                          01227455966
+                                                                          </br></br>
+                                                                          facebook.com/emporiocars
+                                                                          </br></br>
+                                                                          @emporiocars
+
+
+
+                                                                           </p>
+
+          </div>
+
+
+
         </div>
 
 
@@ -191,6 +279,10 @@
 
 
 
+<div style="z-index:99999999;position:fixed;border-top:1px solid white;height:50px;width:100%;background:black;opacity:0.9;bottom:0;left:0;">
+
+
+</div>
 
 
 

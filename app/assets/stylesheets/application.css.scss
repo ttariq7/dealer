@@ -49,6 +49,14 @@ font-family: 'Roboto2';
       padding: 0;
     }
 
+    body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+}
+
     h3 {
     color:white;
     font-family: 'Roboto2';
