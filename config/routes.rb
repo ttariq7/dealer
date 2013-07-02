@@ -3,6 +3,10 @@ Dealer::Application.routes.draw do
     root :to => 'home#index'
   end
 
+
+  root to: 'home#index'
+
+  
   resources :vehicles
 
 
