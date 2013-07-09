@@ -1,7 +1,7 @@
 <img  src="/room.jpg" style="position:fixed;z-index:-9999999;width:100%;height:100%;" />
 
 
-<div style="position:absolute;z-index:99999999;border-bottom:1px solid white;height:19%;width:100%;background:black;opacity:0.8;">
+<div style="position:absolute;z-index:99999999;border-bottom:1px solid white;height:19%;width:100%;background:black;opacity:0.85;">
 
 
 
@@ -9,7 +9,7 @@
 
 
 <div style="font-size:30px;">
-<p style="margin:30px;color:white;font-family:entsans;">EMPORIO CARS LTD</p>
+<p style="margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
 </div>  
 
 
@@ -17,17 +17,17 @@
 
 
 
-<div style="margin:0px auto;width:770px;">
+<div style="margin:0px auto;width:660px;margin-top:40px;">
 
-<a class="active" href="#" onClick="goto('#home', this); return false"style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">HOME</a>
+<a class="active" href="#" onClick="goto('#home', this); return false"style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">Home</a>
 
-<a href="#" onClick="goto('#used', this); return false"style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">USED CARS</a>
+<a href="#" onClick="goto('#used', this); return false"style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">Used Cars</a>
 
-<a href="#" onClick="goto('#warranty', this); return false" style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">WARRANTY</a>
+<a href="#" onClick="goto('#warranty', this); return false" style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">Warranty</a>
 
-<a href="#" onClick="goto('#finance', this); return false"  style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">PREVIOUSLY SOLD</a>
+<a href="#" onClick="goto('#finance', this); return false"  style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">Previously Sold</a>
 
-<a href="#" onClick="goto('#contact', this); return false"  style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">CONTACT US</a>
+<a href="#" onClick="goto('#contact', this); return false"  style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">Contact Us</a>
 
 </div>
 
@@ -75,7 +75,7 @@
 
 
 
-        <div style="z-index:99999999999;margin-top:-30%;margin-right:33px;">
+        <div style="position:absolute;top:160px;float:right;margin-left:20px;">
       
 
         <div style="float:right;width:550px;color:white;background:black;opacity:0.8;border:1px solid white;padding:20px;border-radius:4px;">
@@ -246,31 +246,51 @@ Transferable Warranty Package </p>
 
         <div id="contact" class="contentbox">
 
-          <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?client=safari&amp;oe=UTF-8&amp;q=sl3+7qs&amp;ie=UTF8&amp;hq=&amp;hnear=SL3+7QS,+United+Kingdom&amp;gl=uk&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed&amp;iwloc=near"></iframe>
+          <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?client=safari&amp;oe=UTF-8&amp;q=TN24+8NN&amp;ie=UTF8&amp;hq=&amp;hnear=TN24+8NN,+United+Kingdom&amp;gl=uk&amp;t=m&amp;z=14&amp;ll=51.152606,0.868599&amp;output=embed&amp;iwloc=near"></iframe></small>
 
-          <div style="padding:10px;position:absolute;top:160px;width:320px;height:370px;right:20px;background:black;opacity:0.9;border:1px solid white;border-radius:2px;">
+
+
+          <div style="padding:10px;position:absolute;top:160px;width:320px;height:280px;right:20px;background:black;opacity:0.9;border:1px solid white;border-radius:2px;">
+
+<form class="" style="margin:10px;">
+
+
+      <p style="font-family:Roboto2;float:left;">Name</p></br>
+      <input type="text" id="inputEmail" placeholder="Name" style="float:right;">
+
+      <p style="font-family:Roboto2;float:left;">Email</p>
+      <input type="text" id="inputEmail" placeholder="Email address" style="float:right;"></br>
+
+      <p style="font-family:Roboto2;float:left;">Tel</p>
+      <input type="text" id="inputEmail" placeholder="Contact number" style="float:right;"></br>
+
+      <p style="font-family:Roboto2;float:left;">Message</p>
+      <textarea type="text" id="inputEmail" rows="3" placeholder="Type message here..." style="float:right;"></textarea>
+
+
+
+      <button type="submit" class="btn btn-inverse btn-large" style="float:right;width:300px;font-family:Roboto2;">SEND</button>
+
+
+</form>
+
+          </div>
+
+
+          <div style="margin-left:20px;padding:10px;float:left;top:160px;position:absolute;width:210px;background:black;opacity:0.9;border:1px solid white;border-radius:2px;">
 
           <p style="color:#cfcfcf;margin-left:60px;margin-top:10px;font-size:18px;font-family: 'Roboto2';line-height:25px;font-weight:normal;">                                              
 
-                                                                          <img src="icon/dribbble.png" width="40" height="40" alt="" title="minimad Facebook icon" style="margin-left:-50px;margin-right:10px;" />
+                                                                          <img src="icon/dribbble.png" width="30" height="30" alt="" title="minimad Facebook icon" style="margin-left:-50px;margin-right:10px;" />
                                                                           Magazine Road</br>
-                                                                          Ashford, Kent</br>
+                                                                          Ashford</br>
+                                                                          Kent</br>
                                                                           TN24 8NN
                                                                           </br></br>
-                                                                          <img src="icon/twitter.png" width="40" height="40" alt="" title="minimad Facebook icon" style="margin-left:-50px;margin-right:10px;" />
+                                                                          <img src="icon/twitter.png" width="30" height="30" alt="" title="minimad Facebook icon" style="margin-left:-50px;margin-right:10px;" />
                                                                           07790220000
-                                                                          </br></br>
-                                                                          <img src="icon/facebook.png" width="40" height="40" alt="" title="minimad Facebook icon" style="margin-left:-50px;margin-right:10px;" />
-                                                                          facebook.com/emporiocars
-                                                                          </br></br>
-                                                                          <img src="icon/twitter1.png" width="40" height="40" alt="" title="minimad Facebook icon" style="margin-left:-50px;margin-right:10px;" />
-                                                                          @emporiocars
-                                                                          </br></br>
-                                                                          <img src="icon/email.png" width="40" height="40" alt="" title="minimad Facebook icon" style="margin-left:-50px;margin-right:10px;" />
-                                                                          sales@emporiocars.com
 
-
-                                                                           </p>
+          </p>
 
           </div>
 
