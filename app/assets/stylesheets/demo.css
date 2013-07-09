@@ -1,9 +1,8 @@
 #gallery{
-    width:100%; /*change this*/
-    margin-top:-33px;
+    width:800px; /*change this*/
 }
 #imageareaContent img{
-    width:100%; /*change this*/
+    width:770px; /*change this*/
 }
 
 
@@ -12,7 +11,7 @@
 	margin:0px;
 	padding:10px 10px 0px 10px;
 	margin-top:50px;
-
+    background-color:#333333;
 }
 
 #scrollGalleryFoot{
@@ -20,7 +19,7 @@
 	margin:0px;
 	padding:10px;
 	margin-top:5px;
-    display:none;
+    background-color:#333333;
 }
 
 
@@ -31,6 +30,7 @@
 	width:100%; 
 	margin:0px; 
 	padding:0px;
+	border-bottom: 4px solid #333333;
 }
 #thumbareaContent{
 	padding-left:0px; 
@@ -43,6 +43,7 @@
     margin:0px;
 	margin-right:8px;
 	cursor:pointer;
+    border: 3px solid #ffffff;
 }
 #imagearea{
 	overflow: auto; 
