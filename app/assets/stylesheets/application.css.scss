@@ -26,6 +26,13 @@ src: local("?"),
 url("../Roboto2.ttf") format("truetype");
 }
 
+@font-face {
+font-family: "entsans";
+src: url("../entsans.ttf");
+src: local("?"),
+url("../entsans.ttf") format("truetype");
+}
+
 body {
 
 background-image: linear-gradient(right , rgb(36,37,41) 0%, rgb(0,0,0) 74%);
