@@ -16,12 +16,12 @@
 </div>
 
 
-<div id="gallery">
+<div id="gallery" style="margin-top:160px;">
 
                 <div id="scrollGalleryHead">
 					<div id="thumbarea">
 						<div id="thumbareaContent">
-                            <img  src="/fotos/small_image1.jpg" width="120" height="80" alt="" />
+                            <%= image_tag @vehicle.img1_url.to_s %>
                             <img  src="/fotos/small_image2.jpg" width="120" height="80" alt="" />
                             <img  src="/fotos/small_image3.jpg" width="120" height="80" alt="" />
                             <img  src="/fotos/small_image4.jpg" width="120" height="80" alt="" />
@@ -34,7 +34,7 @@
 				<div id="scrollGalleryFoot">
 					<div id="imagearea">
 					  <div id="imageareaContent">
-                            <img  src="/fotos/image1.jpg" alt="" />
+                            <%= image_tag @vehicle.img1_url.to_s %>
                             <img  src="/fotos/image2.jpg" alt="" />
                             <img  src="/fotos/image3.jpg" alt="" />
                             <img  src="/fotos/image4.jpg" alt="" />
@@ -44,53 +44,6 @@
                       </div> 
 					</div> 
 				</div>
-
-
-<div style="margin-top:260px;">
-
-
-
-	<div style="width:500px;height:550px;opacity:1;">
-	<%= image_tag @vehicle.img1_url.to_s %>
-	</div>
-
-<div style="width:220px;font-size:25px;">
-<p style="text-align:center;">£<%= @vehicle.price %></p>
-</div>
-
-
-<p style="margin-top:20px;margin-bottom:20px;font-size:18px;text-align:center;"> <%= @vehicle.name %> </p>
-
-<div style="width:100px;height:30px;float:left;">
-<p style="text-align:center;"><%= @vehicle.year %></p>
-</div>
-
-<div style="width:110px;height:30px;float:right;">
-<p style="text-align:center;"><%= @vehicle.mileage %>m</p>
-</div>
-
-<div style="width:100px;height:30px;float:left;">
-<p style="text-align:center;"><%= @vehicle.engine %>L</p>
-</div>
-
-<div style="width:110px;height:30px;float:right;">
-<p style="text-align:center;"><%= @vehicle.fuel %></p>
-</div>
-
-<div style="width:100px;height:30px;float:left;">
-<p style="text-align:center;"><%= @vehicle.transmission %></p>
-</div>
-
-<div style="width:110px;height:30px;float:right;">
-<p style="text-align:center;"><%= @vehicle.body %></p>
-</div>
-
-
-
-
-
-
-
 
 </div>
 
