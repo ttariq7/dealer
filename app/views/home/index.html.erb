@@ -144,18 +144,7 @@
 
 
         
-<script type="text/javascript">
 
-var $container = $('#container');
-$container.imagesLoaded(function(){
-  $container.masonry({
-      isFitWidth: true,
-    itemSelector : '.item',
-    columnWidth : 225
-  });
-});
-
-</script>
 
 
 </div>
@@ -228,7 +217,48 @@ Transferable Warranty Package </p>
 
         <div id="finance" class="contentbox">
 
-        <img  src="/cc63.jpg" style="width:100%;border-bottom:1px solid white;" />
+
+          <div id="container1" style="margin:0px auto;width:20%;margin-top:14%;">
+
+           <img class="item1" src="/sc/AudiA4Convertible.jpeg"  />
+
+           <img class="item1" src="/sc/Audi A4 Sline Silver.jpeg"  />
+
+           <img class="item1" src="/sc/BMW 328 Silver.jpeg"  />
+
+           <img class="item1" src="/sc/BMW 330D Estoril Blue.jpeg" />
+
+           <img class="item1" src="/sc/C200 BLue.jpeg" />
+
+           <img class="item1" src="/sc/DSCF6454.jpeg"  />
+
+           <img class="item1" src="/sc/Honda Civic.jpeg"  />
+
+           <img class="item1" src="/sc/Mercedes C270 CDI Black.jpeg"  />
+
+           <img class="item1" src="/sc/Mercedes SL500.jpeg" />
+
+           <img class="item1" src="/sc/Nissan Micra Blue.jpeg"  />
+
+          </div>
+
+
+
+        <img  src="/cc63.jpg" style="z-index:-999;position:absolute;top:0;width:20%;border-bottom:1px solid white;" />
+
+        
+<script type="text/javascript">
+
+var $container = $('#container1');
+$container.imagesLoaded(function(){
+  $container.masonry({
+      isFitWidth: true,
+    itemSelector : '.item1',
+    columnWidth : 230
+  });
+});
+
+</script>
 
                 
         </div>
