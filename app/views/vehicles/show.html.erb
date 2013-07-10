@@ -16,30 +16,30 @@
 </div>
 
 
-<div id="gallery" style="margin-top:160px;">
+<div id="gallery" style="margin-top:14%">
 
                 <div id="scrollGalleryHead">
 					<div id="thumbarea">
 						<div id="thumbareaContent">
                             <%= image_tag @vehicle.img1_url.to_s %>
-                            <img  src="/fotos/small_image2.jpg" width="120" height="80" alt="" />
-                            <img  src="/fotos/small_image3.jpg" width="120" height="80" alt="" />
-                            <img  src="/fotos/small_image4.jpg" width="120" height="80" alt="" />
-                            <img  src="/fotos/small_image5.jpg" width="120" height="80" alt="" />
-                            <img  src="/fotos/small_image6.jpg" width="120" height="80" alt="" />
+                            <%= image_tag @vehicle.img2_url.to_s %>
+                            <%= image_tag @vehicle.img3_url.to_s %>
+                            <%= image_tag @vehicle.img4_url.to_s %>
+                            <%= image_tag @vehicle.img5_url.to_s %>
+                            <%= image_tag @vehicle.img6_url.to_s %>
 
 						</div> 
 					</div>
 				</div>
 				<div id="scrollGalleryFoot">
 					<div id="imagearea">
-					  <div id="imageareaContent">
+					  <div id="imageareaContent" style= "opacity:0.95;">
                             <%= image_tag @vehicle.img1_url.to_s %>
-                            <img  src="/fotos/image2.jpg" alt="" />
-                            <img  src="/fotos/image3.jpg" alt="" />
-                            <img  src="/fotos/image4.jpg" alt="" />
-                            <img  src="/fotos/image5.jpg" alt="" />
-                            <img  src="/fotos/image6.jpg" alt="" />
+                            <%= image_tag @vehicle.img2_url.to_s %>
+                            <%= image_tag @vehicle.img3_url.to_s %>
+                            <%= image_tag @vehicle.img4_url.to_s %>
+                            <%= image_tag @vehicle.img5_url.to_s %>
+                            <%= image_tag @vehicle.img6_url.to_s %>
                             
                       </div> 
 					</div> 

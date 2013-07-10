@@ -137,12 +137,23 @@
 
 
 
-  <div id="container" style="margin:0px auto;width:100px;margin-top:14%;">
+  <div id="container" style="margin:0px auto;width:20%;margin-top:160px;">
       <%= render @vehicles %>
   </div>
 
 
+<script type="text/javascript">
 
+var $container1 = $('#container');
+$container1.imagesLoaded(function(){
+  $container1.masonry({
+      isFitWidth: true,
+    itemSelector : '.item',
+    columnWidth : 320
+  });
+});
+
+</script>
         
 
 

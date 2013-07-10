@@ -1,17 +1,28 @@
 <%= link_to vehicle do %>
 
-<div class="item" style="width:220px;height:340px;margin-bottom:5px;font-family: 'Roboto2';background:black;opacity:0.97;color:#cfcfcf;">
+<div class="item" style="background:black;">
 
-	<div style="width:220px;height:150px;">
+	<div style="width:190px;height:150px;float:left;">
 	<%= image_tag vehicle.img1_url.to_s %>
 	</div>
 
-<div style="width:220px;font-size:25px;">
-<p style="text-align:center;">£<%= vehicle.price %></p>
+	<div style="width:80px;height:72px;float:right;">
+	<%= image_tag vehicle.img2_url.to_s %>
+	</div>
+
+	<div style="width:80px;height:72px;float:right;">
+	<%= image_tag vehicle.img3_url.to_s %>
+	</div>
+
+
+
+<div style="float:left;width:280px;font-size:25px;">
+<p style="text-align:center;font-family:Roboto2;">£<%= vehicle.price %></p>
 </div>
 
-
+<div style="float:left;width:280px;">
 <p style="margin-top:20px;margin-bottom:20px;font-size:18px;text-align:center;"> <%= vehicle.name %> </p>
+</div>
 
 <div style="width:100px;height:30px;float:left;">
 <p style="text-align:center;"><%= vehicle.year %></p>
@@ -40,11 +51,7 @@
 
 
 
-  <% if current_user = (vehicle.user) %>
-    <%= link_to "delete", vehicle, method: :delete,
-                                     data: { confirm: "You sure?" },
-                                     title: vehicle.name %>
-  <% end %>
+
 
 </div>
 
