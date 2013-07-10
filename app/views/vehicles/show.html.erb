@@ -1,7 +1,7 @@
-<img  src="/room.jpg" style="position:fixed;top:0;z-index:-9999999;width:100%;height:100%;" />
+<img  src="/carbon.jpg" style="position:fixed;top:0;z-index:-9999999;width:100%;height:100%;" />
 
 
-<div style="position:absolute;z-index:99999999;border-bottom:1px solid white;height:19%;width:100%;background:black;opacity:0.8;top:0px;">
+<div style="z-index:99999999;border-bottom:1px solid white;border-top:1px solid white;height:19%;width:100%;background:black;opacity:0.8;top:0px;">
 
 <div style="font-size:35px;">
 <p style="margin:30px;color:white;font-family:Roboto2;">EMPORIO CARS</p>
@@ -16,7 +16,7 @@
 </div>
 
 
-<div id="gallery" style="margin-top:14%">
+<div id="gallery" style="margin-top:-40px;">
 
                 <div id="scrollGalleryHead">
 					<div id="thumbarea">
@@ -31,7 +31,7 @@
 						</div> 
 					</div>
 				</div>
-				<div id="scrollGalleryFoot">
+				<div id="scrollGalleryFoot" style="float:left;">
 					<div id="imagearea">
 					  <div id="imageareaContent" style= "opacity:0.95;">
                             <%= image_tag @vehicle.img1_url.to_s %>
@@ -50,3 +50,48 @@
 
 
 
+
+              <div style="float:right;width:40%;color:white;background:black;opacity:0.9;padding:20px;border-radius:2px;margin-right:20px;margin-top:17px;height:298px;">
+
+              </div>
+
+              <div style="float:left;width:96%;color:white;background:black;opacity:0.9;border:1px solid white;border-radius:2px;margin-top:10px;margin-left:2%;">
+
+              <p style="margin:20px;color:#cfcfcf;margin:20px;font-size:15px;font-family: 'Roboto3';line-height:25px;font-weight:normal;">                                              
+
+                <%= @vehicle.description %>
+
+              </p>
+              </div>
+
+
+
+<div style="float:left;height:100px;width:10px;margin-top:207px;"></div>
+
+
+<div style="z-index:99999999;position:fixed;border-top:1px solid white;height:50px;width:100%;background:black;opacity:0.9;bottom:0;left:0;">
+
+<div style="float:left;margin-left:33px;margin-top:4px;">
+<img src="/icon/technorati.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+<img src="/icon/email.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+</div>
+
+
+
+
+<div style="float:right;margin-right:33px;margin-top:4px;">
+
+
+<img src="/cp.gif"  style="border-radius:8px;height:40px;width:40px;" />
+<img src="/hpi.jpg"  style="border-radius:8px;height:40px;width:40px;" />
+<img src="/icon/twitter1.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+<img src="/icon/facebook.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+</div>
+
+<div style="margin:0px auto;width:200px;">
+
+  <p style="font-family:Roboto2;font-size:25px;margin-top:15px;">
+    07790 220000</p>
+</div>
+
+</div>
