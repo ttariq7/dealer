@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @user = current_user
     @vehicles = @user.vehicles
     @vehicle = current_user.vehicles.build if signed_in?
+    @microposts = Micropost.all
   end
 
   def update

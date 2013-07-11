@@ -1,7 +1,7 @@
 <div style="z-index:99999999;border-bottom:1px solid white;border-top:1px solid white;height:19%;width:100%;background:black;opacity:0.8;top:0px;">
 
-<div style="font-size:30px;">
-<p style="margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
+<div style="">
+<p style="font-size:30px;margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
 </div>  
 
 <%= link_to root_path do %>
@@ -11,6 +11,44 @@
 <% end %>
 
 </div>
+
+
+
+
+
+
+<div style="">
+<p style="font-size:30px;margin:30px;color:white;font-family:entsans;">Messages</p>
+</div> 
+
+<table style="font-size:20px;margin-left:1%;color:white;font-family:entsans;width:98%;">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Tel</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @microposts.each do |micropost| %>
+  <tr>
+    <td><%= micropost.name %></td>
+    <td><%= micropost.email %></td>
+    <td><%= micropost.tel %></td>
+    <td><%= micropost.content %></td>
+    <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+
+
+
 
 
 <div style="margin:0px auto;z-index:100000;width:100%;">
@@ -41,3 +79,4 @@
   <% end %>
 </div>
 </div>
+

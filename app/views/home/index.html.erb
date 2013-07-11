@@ -9,7 +9,7 @@
 
 
 <div style="font-size:30px;">
-<p style="margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
+<p style="font-size:30px;margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
 </div>  
 
 
@@ -81,9 +81,9 @@
         <div style="position:absolute;top:160px;float:right;width:20%;">
       
 
-        <div style="float:right;margin-right:20px;width:550px;color:white;background:black;opacity:0.8;border:1px solid white;padding:20px;border-radius:4px;">
+        <div style="float:right;margin-right:20px;width:550px;color:white;background:black;opacity:0.8;border:1px solid white;padding:20px;border-radius:4px;font-family:Roboto3;">
         <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">HOME OF PRESTIGE CARS</h3>
-        <p style="font-size:17px;">
+        <p style="font-size:17px;font-family:Roboto3;">
 
           Here at Emporio Cars Ltd we have over 10 years motor trade experience and you can be assured to receive a proffessional, friendly and hassle free experience.
 
@@ -166,7 +166,7 @@
 
         <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">WARRANTY OPTIONS</h3>
 
-        <p style="font-size:17px;">Customer Protect Gold Warranty is designed to help with the cost of repairs including replacement parts, labour and VAT. And when you consider that modern vehicles contain more than 700 components, any of which might fail over time, the impact on your pocket could be painful! </p>
+        <p style="font-size:17px;font-family:Roboto3;">Customer Protect Gold Warranty is designed to help with the cost of repairs including replacement parts, labour and VAT. And when you consider that modern vehicles contain more than 700 components, any of which might fail over time, the impact on your pocket could be painful! </p>
 
 
 
@@ -178,7 +178,7 @@
         <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;font-size:20px;">
           Some of the things covered</h3>
 
-        <p style="font-size:15px;">
+        <p style="font-size:15px;font-family:Roboto3;">
               
 
 Parts, Labour & VAT
@@ -305,22 +305,23 @@ $container.imagesLoaded(function(){
 
 <div class="" style="margin:10px;">
 
-
-      <input type="text"  placeholder="Name" style="float:right;"/>
+<%= simple_form_for(@micropost) do |f| %>
+      
+      <%= f.text_field :name, style: "float:right;" %>
 
       <p style="font-family:Roboto2;float:left;">Name</p>
-      <input type="text" placeholder="Email address" style="float:right;"/>
+      <%= f.text_field :email, style: "float:right;" %>
 
       <p style="font-family:Roboto2;float:left;">Email</p>
-      <input type="text" placeholder="Contact number" style="float:right;"/>
+      <%= f.text_field :tel, style: "float:right;" %>
 
       <p style="font-family:Roboto2;float:left;">Tel</p>
-      <textarea type="text" id="inputEmail" rows="4" placeholder="Type message here..." style="float:right;"></textarea>
+      <%= f.text_area :content, rows:4, style: "float:right;" %>
        <p style="font-family:Roboto2;float:left;">Message</p>
 
 
       <button type="submit" class="btn btn-inverse btn-large" style="float:left;margin-left:-20px;margin-top:10px;width:340px;font-family:Roboto2;">SEND</button>
-
+<% end %>
 
 </div>
 
