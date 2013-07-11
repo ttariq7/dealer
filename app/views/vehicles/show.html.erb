@@ -3,12 +3,12 @@
 
 <div style="z-index:99999999;border-bottom:1px solid white;border-top:1px solid white;height:19%;width:100%;background:black;opacity:0.8;top:0px;">
 
-<div style="font-size:35px;">
-<p style="margin:30px;color:white;font-family:Roboto2;">EMPORIO CARS</p>
+<div style="font-size:30px;">
+<p style="margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
 </div>  
 
 <%= link_to root_path do %>
-<div style="margin-left:70px;margin:0px auto;width:870px;">
+<div style="margin-left:70px;margin:0px auto;width:870px;margin-top:40px;">
 <p style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">BACK</p>
 </div>
 <% end %>
@@ -16,21 +16,78 @@
 </div>
 
 
+              <div style="float:right;width:43%;color:white;border-radius:2px;margin-right:20px;margin-top:17px;height:298px;">
+
+
+
+
+
+
+
+
+
+<div style="float:left;width:100%;">
+<p style="font-size:23px;text-align:center;line-height:28px;font-family:Roboto2;font-weight:normal;"> <%= @vehicle.name %> </p>
+</div>
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">Registration:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.year %></p>
+</div>
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">No. Doors:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.doors %></p>
+</div>
+
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">Fuel Type:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.fuel %></p>
+</div>
+
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">Engine Size:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.engine %>L</p>
+</div>
+
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">Mileage:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.mileage %> mi</p>
+</div>
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">Body Type:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.body %></p>
+</div>
+
+
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">Colour:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.colour %></p>
+</div>
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;">Trans:</p><p style="margin:12px;float:right;color:red;"><%= @vehicle.transmission %></p>
+</div>
+
+
+
+<div style="float:left;width:49%;font-size:25px;float:left;margin-top:20px;">
+<button type="submit" class="btn btn-danger btn-large" style="float:left;font-family:Roboto2;width:100%;">Enquire Now</button>
+</div>
+
+
+<div style="float:left;width:50%;font-size:30px;float:right;margin-top:30px;">
+<p style="text-align:center;font-family:Roboto2;">£<%= @vehicle.price %></p>
+</div>
+
+
+
+
+
+
+              </div>
+
 <div id="gallery" style="margin-top:-40px;">
 
-                <div id="scrollGalleryHead">
-					<div id="thumbarea">
-						<div id="thumbareaContent">
-                            <%= image_tag @vehicle.img1_url.to_s %>
-                            <%= image_tag @vehicle.img2_url.to_s %>
-                            <%= image_tag @vehicle.img3_url.to_s %>
-                            <%= image_tag @vehicle.img4_url.to_s %>
-                            <%= image_tag @vehicle.img5_url.to_s %>
-                            <%= image_tag @vehicle.img6_url.to_s %>
 
-						</div> 
-					</div>
-				</div>
 				<div id="scrollGalleryFoot" style="float:left;">
 					<div id="imagearea">
 					  <div id="imageareaContent" style= "opacity:0.95;">
@@ -44,6 +101,19 @@
                       </div> 
 					</div> 
 				</div>
+                                <div id="scrollGalleryHead">
+                    <div id="thumbarea">
+                        <div id="thumbareaContent">
+                            <%= image_tag @vehicle.img1_url.to_s %>
+                            <%= image_tag @vehicle.img2_url.to_s %>
+                            <%= image_tag @vehicle.img3_url.to_s %>
+                            <%= image_tag @vehicle.img4_url.to_s %>
+                            <%= image_tag @vehicle.img5_url.to_s %>
+                            <%= image_tag @vehicle.img6_url.to_s %>
+
+                        </div> 
+                    </div>
+                </div>
 
 </div>
 
@@ -51,11 +121,9 @@
 
 
 
-              <div style="float:right;width:40%;color:white;background:black;opacity:0.9;padding:20px;border-radius:2px;margin-right:20px;margin-top:17px;height:298px;">
 
-              </div>
 
-              <div style="float:left;width:96%;color:white;background:black;opacity:0.9;border:1px solid white;border-radius:2px;margin-top:10px;margin-left:2%;">
+              <div style="float:left;width:100%;color:white;background:black;opacity:0.9;border-top:1px solid white;border-radius:2px;margin-top:10px;">
 
               <p style="margin:20px;color:#cfcfcf;margin:20px;font-size:15px;font-family: 'Roboto3';line-height:25px;font-weight:normal;">                                              
 
@@ -66,7 +134,7 @@
 
 
 
-<div style="float:left;height:100px;width:10px;margin-top:207px;"></div>
+<div style="float:left;height:55px;width:10px;margin-top:0px;"></div>
 
 
 <div style="z-index:99999999;position:fixed;border-top:1px solid white;height:50px;width:100%;background:black;opacity:0.9;bottom:0;left:0;">

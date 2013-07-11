@@ -1,61 +1,57 @@
 <%= link_to vehicle do %>
 
-<div class="item" style="background:black;">
+<div class="item" style="">
 
-	<div style="width:190px;height:150px;float:left;">
+	<div style="width:260px;float:left;padding:15px;background:black;">
 	<%= image_tag vehicle.img1_url.to_s %>
 	</div>
 
-	<div style="width:80px;height:72px;float:right;">
-	<%= image_tag vehicle.img2_url.to_s %>
-	</div>
 
-	<div style="width:80px;height:72px;float:right;">
-	<%= image_tag vehicle.img3_url.to_s %>
-	</div>
-
-
-
-<div style="float:left;width:275px;font-size:25px;">
-<p style="text-align:center;font-family:Roboto2;">£<%= vehicle.price %></p>
+<div style="float:right;width:10%;">
+<p style="font-family:Roboto2;float:right;font-size:25px;">£<%= vehicle.price %></p>
 </div>
 
-<div style="float:left;width:275px;">
-<p style="margin-top:20px;margin-bottom:20px;font-size:18px;text-align:center;"> <%= vehicle.name %> </p>
-</div>
 
-<div style="width:100px;height:30px;float:left;">
-<p style="text-align:center;"><%= vehicle.year %></p>
-</div>
-
-<div style="width:110px;height:30px;float:right;">
-<p style="text-align:center;"><%= vehicle.mileage %>m</p>
-</div>
-
-<div style="width:100px;height:30px;float:left;">
-<p style="text-align:center;"><%= vehicle.engine %>L</p>
-</div>
-
-<div style="width:110px;height:30px;float:right;">
-<p style="text-align:center;"><%= vehicle.fuel %></p>
-</div>
-
-<div style="width:100px;height:30px;float:left;">
-<p style="text-align:center;"><%= vehicle.transmission %></p>
-</div>
-
-<div style="width:110px;height:30px;float:right;">
-<p style="text-align:center;"><%= vehicle.body %></p>
+<div style="float:right;width:54%;">
+<p style="font-size:23px;line-height:28px;font-family:Roboto2;float:left;"> <%= vehicle.name %> </p>
 </div>
 
 
 
 
-  <% if current_user = (vehicle.user) %>
-    <%= link_to "delete", vehicle, method: :delete,
-                                     data: { confirm: "You sure?" },
-                                     title: vehicle.name %>
-  <% end %>
+
+
+<div style="width:20%;height:43px;float:right;background:black;margin-top:5px;font-size:17px;margin-left:2%;">
+<p style="margin:12px;float:left;font-size:12px;">Mileage:</p><p style="margin:12px;float:right;color:red;"><%= vehicle.mileage %> mi</p>
+</div>
+
+<div style="width:20%;height:43px;float:right;background:black;margin-top:5px;font-size:17px;margin-left:2%;">
+<p style="margin:12px;float:left;font-size:12px;">Registration:</p><p style="margin:12px;float:right;color:red;"><%= vehicle.year %></p>
+</div>
+
+<div style="width:20%;height:43px;float:right;background:black;margin-top:5px;font-size:17px;">
+<p style="margin:12px;float:left;font-size:12px;">Trans:</p><p style="margin:12px;float:right;color:red;"><%= vehicle.transmission %></p>
+</div>
+
+
+<div style="width:64%;float:right;margin-top:5px;font-size:13px;">
+<p style="font-family:helvetica;margin:5px;float:right;line-height:14px;"><%= truncate vehicle.description, length:450 %></p>
+</div>
+
+
+
+<div style="float:right;width:20%;font-size:25px;margin-top:5px;">
+<button type="submit" class="btn btn-danger btn-medium" style="font-family:Roboto2;width:100%;">More info</button>
+</div>
+
+
+
+
+
+
+
+
+
 
 </div>
 
