@@ -47,7 +47,11 @@
 
 
 
-
+  <% if current_user = (vehicle.user) %>
+    <%= link_to "delete", vehicle, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: vehicle.name %>
+  <% end %>
 
 
 
