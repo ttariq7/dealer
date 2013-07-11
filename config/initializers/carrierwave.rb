@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
 
   }
   config.fog_directory  = 'femynyn.images'                     # required
-
+config.fog_public = true
   config.cache_dir = "#{Rails.root}/tmp/uploads"
 
 end

@@ -1,4 +1,20 @@
-<h2>Sign in</h2>
+<div style="z-index:99999999;border-bottom:1px solid white;border-top:1px solid white;height:19%;width:100%;background:black;opacity:0.8;top:0px;">
+
+<div style="font-size:30px;">
+<p style="margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
+</div>  
+
+<%= link_to root_path do %>
+<div style="margin-left:70px;margin:0px auto;width:870px;margin-top:40px;">
+<p style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">Sign In</p>
+</div>
+<% end %>
+
+</div>
+
+
+<div style="margin:0px auto;margin-top:30px;">
+
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
   <%= f.input :email, :autofocus => true %>
   <%= f.input :password %>
@@ -6,3 +22,5 @@
   <%= f.button :submit, "Sign in", :class => 'btn-primary' %>
 <% end %>
 <%= render "devise/shared/links" %>
+
+</div>
