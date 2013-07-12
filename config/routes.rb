@@ -28,6 +28,8 @@ Dealer::Application.routes.draw do
 
   match '/signin',  to: 'devise#sessions#new'
   match '/dashboard',  to: 'users#dashboard'
+  match '/results',  to: 'home#results'
+    match '/result',  to: 'home#results1'
   
 
 end

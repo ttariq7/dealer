@@ -47,7 +47,7 @@
 
 
 
-  <% if current_user = (vehicle.user) %>
+  <% if signed_in? %>
     <%= link_to "delete", vehicle, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: vehicle.name %>
