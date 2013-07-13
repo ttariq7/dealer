@@ -35,7 +35,19 @@ url("../entsans.ttf") format("truetype");
 
 body {
 
+background-image: linear-gradient(right , rgb(36,37,41) 0%, rgb(0,0,0) 74%);
+background-image: -o-linear-gradient(right , rgb(36,37,41) 0%, rgb(0,0,0) 74%);
+background-image: -moz-linear-gradient(right , rgb(36,37,41) 0%, rgb(0,0,0) 74%);
+background-image: -webkit-linear-gradient(right , rgb(36,37,41) 0%, rgb(0,0,0) 74%);
+background-image: -ms-linear-gradient(right , rgb(36,37,41) 0%, rgb(0,0,0) 74%);
 
+background-image: -webkit-gradient(
+	linear,
+	right top,
+	left top,
+	color-stop(0, rgb(36,37,41)),
+	color-stop(0.74, rgb(0,0,0))
+);
 font-family: 'Roboto2';
 }
 
