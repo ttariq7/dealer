@@ -1,0 +1,52 @@
+<div style="z-index:99999999;border-bottom:1px solid white;border-top:1px solid white;height:19%;width:100%;background:black;opacity:0.8;top:0px;">
+
+<div style="">
+<p style="font-size:30px;margin:30px;color:white;font-family:entsans;font-size:30px;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
+</div>  
+
+<%= link_to root_path do %>
+<div style="margin-left:70px;margin:0px auto;width:870px;margin-top:40px;">
+<p style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">Edit Car</p>
+</div>
+<% end %>
+
+</div>
+
+
+
+<div style="margin:0px auto;z-index:100000;width:100%;margin-top:00px;">
+<div style="margin:0px auto;z-index:100000;width:800px;margin-top:30px;">
+  <%= form_for(@vehicle) do |f| %>
+  <%= f.text_field :name, placeholder: "Title", style: "width:653px;" %></br>
+  <%= f.text_area :description, rows:5,  placeholder: "Description", style: "width:653px;" %>
+  <%= f.text_field :make, placeholder: "Car Manufacturer" %>
+  <%= f.text_field :model, placeholder: "Model" %>
+  <%= f.text_field :colour, placeholder: "Colour" %>
+  <%= f.text_field :mileage, placeholder: "Mileage" %>
+  <%= f.text_field :engine, placeholder: "Engine (3.2)" %>
+  <%= f.text_field :year, placeholder: "Year of Car" %>
+  <%= f.text_field :price, placeholder: "Price (9500)" %>
+  <%= f.select :body, options_for_select([["Body Type", ""], "Saloon", "Coupe", "Hatchback", "Estate","Convertible", "4x4"]) %>
+  <%= f.select :transmission, options_for_select([["Auto/Manual", ""], "Automatic", "Manual"]) %>
+  <%= f.select :status, options_for_select([["Sold/Unsold", ""], "Sold", "Unsold"]) %>
+  <%= f.select :doors, options_for_select([["No. Doors", ""], "1", "2", "3", "4","5", "6"]) %>
+  
+  <%= f.select :fuel, options_for_select([["Fuel Type", ""], "Petrol", "Diesel"]) %>
+  <%= f.file_field :img1 %>
+  <%= f.file_field :img2 %>
+  <%= f.file_field :img3 %>
+  <%= f.file_field :img4 %>
+  <%= f.file_field :img5 %>
+  <%= f.file_field :img6 %>
+  <%= f.submit "UPDATE CAR", class: "btn btn-large btn-danger", style: "width:671px;margin-top:10px;font-family:Roboto2;" %>
+  <% end %>
+</div>
+</div>
+
+
+
+
+
+
+
+

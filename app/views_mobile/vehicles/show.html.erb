@@ -1,0 +1,165 @@
+
+
+
+<div style="z-index:99999999;border-bottom:1px solid white;border-top:1px solid white;height:19%;width:100%;background:black;opacity:0.8;top:0px;">
+
+<div style="font-size:30px;">
+<p style="margin:30px;color:white;font-family:entsans;font-size:30px;">EMPORIO CARS<p style="font-size:10px;margin-top:-58px;margin-left:290px;font-family:entsans;">LTD</p></p>
+</div>  
+
+<%= link_to root_path do %>
+<div style="margin-left:70px;margin:0px auto;width:870px;margin-top:40px;">
+<p style="float:left;font-size:20px;color:white;font-family:Roboto2;margin-right:40px;">BACK</p>
+</div>
+<% end %>
+
+</div>
+
+
+              <div style="float:right;width:43%;color:white;border-radius:2px;margin-right:20px;margin-top:17px;height:298px;">
+
+
+
+
+
+
+
+
+
+<div style="float:left;width:100%;">
+<p style="font-size:23px;text-align:center;line-height:28px;font-family:Roboto2;font-weight:normal;"> <%= @vehicle.name %> </p>
+</div>
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;font-family:Roboto2;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">Registration:</p><p style="margin:12px;float:right;color:red;font-family:Roboto2;font-size:18px;"><%= @vehicle.year %></p>
+</div>
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">No. Doors:</p><p style="margin:12px;float:right;color:red;font-size:18px;font-family:Roboto2;"><%= @vehicle.doors %></p>
+</div>
+
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">Fuel Type:</p><p style="margin:12px;float:right;color:red;font-size:18px;font-family:Roboto2;"><%= @vehicle.fuel %></p>
+</div>
+
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">Engine Size:</p><p style="margin:12px;float:right;color:red;font-size:18px;font-family:Roboto2;"><%= @vehicle.engine %>L</p>
+</div>
+
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">Mileage:</p><p style="margin:12px;float:right;color:red;font-size:18px;font-family:Roboto2;"><%= @vehicle.mileage %> mi</p>
+</div>
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">Body Type:</p><p style="margin:12px;float:right;color:red;font-size:18px;font-family:Roboto2;"><%= @vehicle.body %></p>
+</div>
+
+
+
+<div style="width:49%;height:45px;float:left;background:black;margin-top:5px;font-size:18px;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">Colour:</p><p style="margin:12px;float:right;color:red;font-size:18px;font-family:Roboto2;"><%= @vehicle.colour %></p>
+</div>
+
+<div style="width:49%;height:45px;float:right;background:black;margin-top:5px;">
+<p style="margin:12px;float:left;font-size:13px;font-family:Roboto2;">Trans:</p><p style="margin:12px;float:right;color:red;font-size:18px;font-family:Roboto2;"><%= @vehicle.transmission %></p>
+</div>
+
+
+
+<div style="float:left;width:49%;font-size:25px;float:left;margin-top:20px;">
+<button type="submit" class="btn btn-danger btn-large" style="float:left;font-family:Roboto2;width:100%;">Enquire Now</button>
+</div>
+
+
+<div style="float:left;width:50%;float:right;margin-top:30px;">
+<p style="text-align:center;font-family:Roboto2;font-size:30px;">£<%= @vehicle.price %></p>
+</div>
+
+
+
+
+
+
+              </div>
+
+<div id="gallery" style="margin-top:-40px;">
+
+
+				<div id="scrollGalleryFoot" style="float:left;">
+					<div id="imagearea">
+					  <div id="imageareaContent" style= "opacity:0.95;">
+                            <%= image_tag @vehicle.img1.url if @vehicle.img1? %>
+                            <%= image_tag @vehicle.img2.url.to_s if @vehicle.img2? %>
+                            <%= image_tag @vehicle.img3.url.to_s if @vehicle.img3? %>
+                            <%= image_tag @vehicle.img4.url.to_s if @vehicle.img4? %>
+                            <%= image_tag @vehicle.img5.url.to_s if @vehicle.img5? %>
+                            <%= image_tag @vehicle.img6.url.to_s if @vehicle.img6? %>
+                            
+                      </div> 
+					</div> 
+				</div>
+                                <div id="scrollGalleryHead">
+                    <div id="thumbarea">
+                        <div id="thumbareaContent">
+                            <%= image_tag @vehicle.img1.url if @vehicle.img1? %>
+                            <%= image_tag @vehicle.img2.url.to_s if @vehicle.img2?%>
+                            <%= image_tag @vehicle.img3.url.to_s if @vehicle.img3? %>
+                            <%= image_tag @vehicle.img4.url.to_s if @vehicle.img4? %>
+                            <%= image_tag @vehicle.img5.url.to_s if @vehicle.img5? %>
+                            <%= image_tag @vehicle.img6.url.to_s if @vehicle.img6? %>
+
+                        </div> 
+                    </div>
+                </div>
+
+</div>
+
+
+
+
+
+
+
+              <div style="float:left;width:100%;color:white;background:black;opacity:0.9;border-top:1px solid white;border-radius:2px;margin-top:100px;">
+
+              <p style="margin:20px;color:#cfcfcf;margin:20px;font-size:15px;font-family: 'Roboto3';line-height:25px;font-weight:normal;">                                              
+
+                <%= @vehicle.description %>
+
+              </p>
+              </div>
+
+
+
+<div style="float:left;height:55px;width:10px;margin-top:0px;"></div>
+
+
+<div style="z-index:99999999;position:fixed;border-top:1px solid white;height:50px;width:100%;background:black;opacity:0.9;bottom:0;left:0;">
+
+<div style="float:left;margin-left:33px;margin-top:4px;">
+<img src="/icon/technorati.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+<img src="/icon/email.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+</div>
+
+
+
+
+<div style="float:right;margin-right:33px;margin-top:4px;">
+
+
+<img src="/cp.gif"  style="border-radius:8px;height:40px;width:40px;" />
+<img src="/hpi.jpg"  style="border-radius:8px;height:40px;width:40px;" />
+<img src="/icon/twitter1.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+<img src="/icon/facebook.png" width="40" height="40" alt="" title="minimad Facebook icon" />
+</div>
+
+<div style="margin:0px auto;width:200px;">
+
+  <p style="font-family:Roboto2;font-size:25px;margin-top:15px;">
+    07790 220000</p>
+</div>
+
+</div>
