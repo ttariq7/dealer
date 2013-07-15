@@ -53,7 +53,7 @@
 
 
 
-  <% if signed_in? %>
+  <% if current_page?('/dashboard') %>
     <%= link_to "delete", vehicle, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: vehicle.name %>
