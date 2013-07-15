@@ -11,6 +11,20 @@ before_filter :correct_user,   only: :destroy
     end
   end
 
+    def edit
+    @vehicle = Vehicle.find(params[:id])
+  end
+
+  def update
+
+    @vehicle = Vehicle.find(params[:id])
+    if @vehicle.update_attributes(params[:vehicle])
+      redirect_to '/dashboard'
+    else
+      render 'edit'
+    end
+  end
+
   def show
     @vehicle = Vehicle.find(params[:id])
   end

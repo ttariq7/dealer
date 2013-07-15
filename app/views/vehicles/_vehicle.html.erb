@@ -51,9 +51,11 @@
     <%= link_to "delete", vehicle, method: :delete,
                                      data: { confirm: "You sure?" },
                                      title: vehicle.name %>
+  
+
+  <%= link_to "Edit", edit_vehicle_path(vehicle),  style: "position:absolute;width:168px;height:25px;" if vehicle.id? %>
+
   <% end %>
-
-
 
 
 
