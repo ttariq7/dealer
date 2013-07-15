@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   def dashboard
     @user = current_user
-    @vehicles = @user.vehicles
+    @vehicles = @user.vehicles.all.sort_by { |a| -(a.price.to_i) }
     @vehicle = current_user.vehicles.build if signed_in?
     @microposts = Micropost.all
   end

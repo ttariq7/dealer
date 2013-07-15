@@ -11,7 +11,7 @@ class Vehicle < ActiveRecord::Base
 
   validates :user_id, presence: true 
 
-  default_scope order: 'vehicles.price DESC'
+  default_scope order: 'vehicles.price DESC' 
 
 end
 
