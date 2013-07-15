@@ -2,9 +2,15 @@
 
 <div class="item" style="">
 
+<% if vehicle.img1? %>
 	<div style="width:260px;float:left;padding:15px;background:black;">
 	<%= image_tag vehicle.img1_url.to_s %>
 	</div>
+<% else %>
+	<div style="width:260px;height:200px;float:left;padding:15px;background:black;">
+	<p style="text-align:center;margin-top:90px;">Images Coming</p>
+	</div>
+<% end %>
 
 
 <div style="float:right;width:10%;">
