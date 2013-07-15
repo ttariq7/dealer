@@ -1,0 +1,177 @@
+<img  src="/carbon.jpg" style="position:fixed;z-index:-9999999;width:100%;height:100%;" />
+
+
+<div style="position:absolute;z-index:99999999;border-bottom:1px solid white;height:70px;width:100%;background:black;opacity:0.85;">
+
+
+
+
+
+
+<div style="font-size:30px;">
+<p style="font-size:0.6em;margin:30px;color:white;font-family:entsans;">EMPORIO CARS<p style="font-size:0.2em;margin-top:-58px;margin-left:100px;font-family:entsans;">LTD</p></p>
+</div>  
+
+
+
+
+
+
+<div style="margin:0px auto;width:90%;margin-top:40px;">
+
+<a class="active" href="#" onClick="goto('#home', this); return false"style="float:left;font-size:20px;color:white;font-family:Roboto3;margin-right:10px;">Home</a>
+
+<a href="#" onClick="goto('#used', this); return false"style="float:left;font-size:20px;color:white;font-family:Roboto3;margin-right:10px;">Used</a>
+
+<a href="#" onClick="goto('#warranty', this); return false" style="float:left;font-size:20px;color:white;font-family:Roboto3;margin-right:10px;">Warr</a>
+
+<a href="#" onClick="goto('#contact', this); return false"  style="float:left;font-size:20px;color:white;font-family:Roboto3;margin-right:10px;">Cont</a>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="wrap">
+      
+    <div id="content">
+    
+      <div class="contentbox-wrapper1">
+        
+
+
+
+
+        <div id="home" class="contentbox1">
+
+
+
+        <div style="margin-top:160px;width:96%;margin-left:2%;">
+      
+
+        <div style="color:white;background:black;opacity:0.8;border:1px solid white;padding:20px;border-radius:4px;font-family:Roboto3;">
+        <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">HOME OF PRESTIGE CARS</h3>
+        <p style="font-size:17px;font-family:Roboto3;">
+
+          Here at Emporio Cars Ltd we have over 10 years motor trade experience and you can be assured to receive a proffessional, friendly and hassle free experience.
+
+        </br></br>
+
+          We do not follow a strict sales process and we do not pressure our customers in any way. All of our customers are treated equally regardless of their budget. It's all about finding the right car for you, at the right price, so you can drive away happy.
+
+        </br></br>
+
+          Please feel free to call, text or email us with any questions and we will answer them honestly and as thoroughly as possible.
+
+
+
+          Our phone line is open 7 days a week 9am - 9pm. However, viewing is by appointment.
+
+        </br></br>
+        
+          Most of our vehicles are fully prepared and ready to drive away. We can arrange road fund for your new vehicle quickly and can also handle all of your private plate transfers.
+
+
+
+        </p>
+        </div>
+
+
+        </div>
+
+
+        
+
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <div id="used" class="contentbox1">
+
+
+          Used Cars
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div id="warranty" class="contentbox1">
+          
+          Contact Us
+
+        </div>
+
+
+
+
+
+        <div id="contact" class="contentbox1">
+
+          Send us a messsage
+
+        </div>  
+
+
+</div>
+</div>
+
+
+
+</div>
+
+
+<script>
+
+function goto(id, t){ 
+  //animate to the div id.
+  $(".contentbox-wrapper1").animate({"left": -($(id).position().left)}, 600);
+  
+  // remove "active" class from all links inside #nav
+    $('#nav a').removeClass('active');
+  
+  // add active class to the current link
+    $(t).addClass('active');  
+}
+
+</script>
+
