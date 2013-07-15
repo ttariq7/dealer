@@ -7,7 +7,7 @@ before_filter :check_for_mobile
 
 
 		@user = User.find_by_id(5)
-		@vehicles = @user.vehicles
+		@vehicles = @user.vehicles.all.sort_by { |a| -(a.price.to_i) }
     	@vehicle = current_user.vehicles.build if signed_in?
     	@micropost = Micropost.new
 

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @vehicles = @user.vehicles
+    @vehicles = @user.vehicles.all.sort_by { |a| -(a.price.to_i) }
     @vehicle = current_user.vehicles.build if signed_in?
   end
 
