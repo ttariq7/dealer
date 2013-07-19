@@ -13,5 +13,7 @@ class Vehicle < ActiveRecord::Base
 
   default_scope order: 'vehicles.price DESC' 
 
+  scope :sold, lambda{ where("status = ?", "sold")}
+
 end
 

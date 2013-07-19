@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     @vehicles = @user.vehicles.all.sort_by { |a| -(a.price.to_i) }
     @vehicle = current_user.vehicles.build if signed_in?
     @microposts = Micropost.all
+    @vehicles1 = Vehicle.find(:all, :conditions => ["status = ?", "Sold"])
   end
 
   def update

@@ -77,7 +77,7 @@
 <a href="#" onClick="goto('#used', this); return false"style="z-index:9999999999999999;position:absolute;top:160px;float:left;font-size:17px;color:white;font-family:Roboto2;margin-left:33px;" class="btn btn-danger btn-large">Search All Our Stock</a>
 
       
-<div style="width:960px;margin:0px auto;background:black;height:600px;padding:20px;">
+<div style="width:100%;margin:0px auto;background:black;height:1000px;padding:20px;">
 
         <div style="float:left;margin-top:40px;margin-left:5px;width:410px;color:white;background:black;opacity:0.8;padding:20px;font-family:helvetica;">
         <h3 style="padding:0px;margin:0px;font-family:Roboto2;font-weight:normal;">HOME OF PRESTIGE CARS</h3>
@@ -229,11 +229,15 @@
 
           <div id="container1" style="margin:0px auto;width:20%;margin-top:30px;">
 
+          <% @vehicles1.each do |vehicle| %>
+
+          <img class="item1" src= <%= vehicle.img1 %>  />
+
+          <% end %>
+
            <img class="item1" src="/sc/AudiA4Convertible.jpeg"  />
 
            <img class="item1" src="/sc/Audi A4 Sline Silver.jpeg"  />
-
-           <img class="item1" src="/sc/BMW 328 Silver.jpeg"  />
 
            <img class="item1" src="/sc/BMW 330D Estoril Blue.jpeg" />
 

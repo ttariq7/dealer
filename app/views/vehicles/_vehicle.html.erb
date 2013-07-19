@@ -56,10 +56,10 @@
   <% if current_page?('/dashboard') %>
     <%= link_to "delete", vehicle, method: :delete,
                                      data: { confirm: "You sure?" },
-                                     title: vehicle.name %>
+                                     title: vehicle.name, class: "btn btn-danger ", style: "" %>
   
 
-  <%= link_to "Edit", edit_vehicle_path(vehicle),  style: "position:absolute;width:168px;height:25px;color:white;" if vehicle.id? %>
+  <%= link_to "Edit", edit_vehicle_path(vehicle),  class: "btn btn-primary ", style: "position:absolute;color:white;" if vehicle.id? %>
 
   <% end %>
 

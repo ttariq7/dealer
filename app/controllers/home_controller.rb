@@ -11,6 +11,10 @@ before_filter :check_for_mobile
     	@vehicle = current_user.vehicles.build if signed_in?
     	@micropost = Micropost.new
 
+  
+
+    	@vehicles1 = Vehicle.find(:all, :conditions => ["status = ?", "Sold"])
+
 
 	end
 
